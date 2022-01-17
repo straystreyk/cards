@@ -1,3 +1,15 @@
 .swiperOnMain {
   height: 600px;
 }
+
+.swiperBulletOnMain {
+  width: 15px;
+  height: 4px;
+  background: #fff;
+  border-radius: 4px;
+  transition: 0.20s all linear;
+}
+
+.swiperOnMainActive {
+  width: 25px;
+}

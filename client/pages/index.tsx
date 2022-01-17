@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import cn from "classnames";
 
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,15 +18,23 @@ const MainPage: NextPage = () => {
   return (
     <MainContainer title={"Главная страница"}>
       <Swiper
-          className={classes.swiperOnMain}
-          modules={[Pagination]}
-          pagination={{ clickable: true }}
+        className={classes.swiperOnMain}
+        modules={[Pagination]}
+        pagination={{
+          clickable: true,
+          bulletClass: cn(
+            "swiper-pagination-bullet",
+            classes.swiperBulletOnMain
+          ),
+          bulletActiveClass: cn(
+            "swiper-pagination-bullet-active",
+            classes.swiperOnMainActive
+          ),
+        }}
       >
         {mainSlider.map(({ name, src }: MainSlide) => {
           return (
-            <SwiperSlide
-              key={src}
-            >
+            <SwiperSlide key={src}>
               <Image
                 src={src}
                 loader={imageLoader}
