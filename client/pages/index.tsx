@@ -16,12 +16,14 @@ import classes from "../styles/pages/main-page.module.scss";
 const MainPage: NextPage = () => {
   return (
     <MainContainer title={"Главная страница"}>
-      <Swiper modules={[Pagination]} pagination={{ clickable: true }}>
+      <Swiper
+          className={classes.swiperOnMain}
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+      >
         {mainSlider.map(({ name, src }: MainSlide) => {
           return (
             <SwiperSlide
-              className={classes.swiperSlideMainPage}
-              style={{ height: 500 }}
               key={src}
             >
               <Image
@@ -30,6 +32,7 @@ const MainPage: NextPage = () => {
                 alt={name}
                 layout="fill"
                 objectFit="cover"
+                priority
               />
             </SwiperSlide>
           );

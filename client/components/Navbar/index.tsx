@@ -4,9 +4,10 @@ import { A } from "../Link";
 import { HeaderLogo, SearchIcon } from "../../static/icons";
 import { links, NavLink } from "../../static/constants";
 
+
 import classes from "./Navbar.module.scss";
 
-export const Navbar = () => {
+export const Navbar:React.FC = () => {
   return (
     <header className={classes.header}>
       <div className="container">
