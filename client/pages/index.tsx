@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage, GetStaticProps } from "next";
 import Image from "next/image";
 import cn from "classnames";
 
@@ -8,15 +8,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { MainContainer } from "../components/MainContainer";
 import { MainSlide, mainSlider } from "../static/constants";
 import { imageLoader } from "../plugins/loaderImagesNext";
+import { meta } from "../static/meta_information/main-page";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 import classes from "../styles/pages/main-page.module.scss";
 
-const MainPage: NextPage = () => {
+const MainPage: NextPage = (props: any) => {
+  console.log(props);
   return (
-    <MainContainer title={"Главная страница"}>
+    <MainContainer {...meta}>
       <Swiper
         className={classes.swiperOnMain}
         modules={[Pagination]}
