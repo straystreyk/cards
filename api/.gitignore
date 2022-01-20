@@ -10,7 +10,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-tmp/*
 !/log/.keep
 !/tmp/.keep
 
@@ -26,10 +25,5 @@ tmp/*
 !/tmp/storage/
 !/tmp/storage/.keep
 
-/public/assets
-
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-
-/config/database.yml
-/tmp/cache/
