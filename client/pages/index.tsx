@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from "next";
+import type { NextPage } from "next";
 import Image from "next/image";
 import cn from "classnames";
 
@@ -15,8 +15,7 @@ import "swiper/css/pagination";
 
 import classes from "../styles/pages/main-page.module.scss";
 
-const MainPage: NextPage = (props: any) => {
-  console.log(props);
+const MainPage: NextPage = () => {
   return (
     <MainContainer {...meta}>
       <Swiper
