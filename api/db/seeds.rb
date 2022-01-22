@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require_relative 'seeders/cards_seeding'
+
+puts '... seeding'
+
+seed_cards
+
+puts 'seeding done'
+
