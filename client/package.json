@@ -3,15 +3,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "db": "json-server -p 3020 -w db.json",
+    "db": "json-server -p 3020 -d 400 -w db.json",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/lab": "^5.0.0-alpha.65",
+    "@mui/material": "^5.3.0",
     "classnames": "^2.3.1",
     "json-server": "^0.17.0",
-    "next": "12.0.8",
+    "next": "^12.0.8",
     "nextjs-progressbar": "0.0.13",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -21,9 +25,13 @@
   "devDependencies": {
     "@types/node": "17.0.8",
     "@types/react": "17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "babel-eslint": "^10.1.0",
     "eslint": "8.6.0",
-    "eslint-config-next": "12.0.8",
+    "eslint-config-next": "^0.2.4",
     "prettier": "^2.5.1",
+    "ts-standard": "^11.0.0",
     "typescript": "4.5.4"
   }
 }

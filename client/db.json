@@ -1,9 +1,20 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "cards": [
+    {
+      "name": "credit1",
+      "description": "gey banya"
+    },
+    {
+      "name": "credit2",
+      "description": "gey banya"
+    },
+    {
+      "name": "credit3",
+      "description": "gey banya"
+    },
+    {
+      "name": "credit4",
+      "description": "gey banya"
+    }
+  ]
 }

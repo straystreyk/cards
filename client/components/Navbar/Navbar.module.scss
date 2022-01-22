@@ -1,3 +1,11 @@
+.header {
+  padding: 20px 0;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 15%);
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
 .navWrapper {
   display: flex;
   align-items: center;
@@ -14,12 +22,6 @@
       }
     }
   }
-}
-
-.header {
-  padding: 20px 0;
-  box-shadow: 0 2px 12px rgb(0 0 0 / 15%);
-  background: #fff;
 }
 
 .search {

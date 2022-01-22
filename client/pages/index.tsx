@@ -1,26 +1,33 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import cn from "classnames";
-
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { MainContainer } from "../components/MainContainer";
 import { MainSlide, mainSlider } from "../static/constants";
-import { imageLoader } from "../plugins/loaderImagesNext";
 import { meta } from "../static/meta_information/main-page";
+import { imageLoader } from "../plugins/loader-images-next";
+import { TabList } from "../components/TabList";
+
+import { CardInterface } from "../components/TabList";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 import classes from "../styles/pages/main-page.module.scss";
 
-const MainPage: NextPage = () => {
+interface MainPageProps {
+  cards?: CardInterface[];
+}
+
+const MainPage: NextPage<MainPageProps> = () => {
   return (
     <MainContainer {...meta}>
       <Swiper
         className={classes.swiperOnMain}
         modules={[Pagination]}
+        loop={true}
         pagination={{
           clickable: true,
           bulletClass: cn(
@@ -48,6 +55,9 @@ const MainPage: NextPage = () => {
           );
         })}
       </Swiper>
+      <div className="container">
+        <TabList />
+      </div>
     </MainContainer>
   );
 };
