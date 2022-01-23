@@ -6,6 +6,12 @@
   "rules": {
     "quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "jsx-quotes": [2, "prefer-double"],
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "never",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }]
   }
 }

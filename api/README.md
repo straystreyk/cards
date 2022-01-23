@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### FRONTEND
+Go to the client path, and install all dependencies. You need node js >= 16.3.0
+```
+cd client
+npm install
+```
 
-Things you may want to cover:
+Run for development
+```
+npm run dev
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### API
+Need to install postgresql and ruby (check the ruby version in api/.ruby-version)
