@@ -4,11 +4,12 @@ import { ToggleButton } from "../ToggleButton";
 // interface ToggleButtonGroupProps {}
 
 export const ToggleButtonGroup: React.FC = () => {
-  const [buttonsValues, setButtonValue] = React.useState<[] | string[]>([]);
-
   return (
     <>
-      <ToggleButton title="one" name="jopa" value="One" />
+      <ToggleButton title="one" name="jopa" value="false" />
+      <ToggleButton title="one" name="jopa2" value="false" />
+      <ToggleButton title="one" name="jopa3" value="false" />
+      <ToggleButton title="one" name="jopa4" value="false" />
     </>
   );
 };

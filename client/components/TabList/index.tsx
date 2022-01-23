@@ -16,16 +16,19 @@ interface CardSearcherProps {
   cards?: CardInterface[];
 }
 
+export const ButtonContext: React.Context<any> = React.createContext(null);
+
 export const TabList: React.FC<CardSearcherProps> = () => {
-  const [value, setValue] = React.useState("1");
+  const [tabValue, setTabValue] = React.useState("1");
+  const [widgetValue, setWidgetValue] = React.useState({});
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
+    setTabValue(newValue);
   };
 
   return (
-    <>
-      <TabContext value={value}>
+    <ButtonContext.Provider value={{ setWidgetValue }}>
+      <TabContext value={tabValue}>
         <Box>
           <TabListDefault onChange={handleChange}>
             <Tab label="Debit cards" value="1" />
@@ -37,6 +40,6 @@ export const TabList: React.FC<CardSearcherProps> = () => {
         </TabPanel>
         <TabPanel value="2">Item Two</TabPanel>
       </TabContext>
-    </>
+    </ButtonContext.Provider>
   );
 };

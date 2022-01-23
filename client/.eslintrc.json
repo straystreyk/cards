@@ -6,6 +6,6 @@
   "rules": {
     "quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "jsx-quotes": [2, "prefer-double"],
-    "comma-dangle": [2, "never"]
+    "comma-dangle": ["error", "never"]
   }
 }
