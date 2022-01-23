@@ -8,7 +8,7 @@
     "jsx-quotes": [2, "prefer-double"],
     "comma-dangle": ["error", {
       "arrays": "never",
-      "objects": "never",
+      "objects": "always-multiline",
       "imports": "never",
       "exports": "never",
       "functions": "never"

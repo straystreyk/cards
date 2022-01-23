@@ -14,7 +14,7 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
   value,
   title,
 }) => {
-  const [active, setActive] = React.useState<boolean>(false);
+  const [active, setActive] = React.useState<boolean>(value ? !value : false);
   const { setWidgetValue } = React.useContext(ButtonContext);
 
   const handleButton = React.useCallback(
