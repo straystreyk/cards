@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CardCredit < Card
+class CreditCard < Card
   # Represents banking card
   #
 end
