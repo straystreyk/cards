@@ -8,8 +8,18 @@ import TabPanel from "@mui/lab/TabPanel";
 import { ToggleButtonGroup } from "../ToggleButtonGroup";
 
 export interface CardInterface {
+  id: string;
   name: string;
   description: string;
+  free_period: string;
+  created_at: string;
+  interest_rate: number;
+  credit_limit: number;
+  cashback: number;
+  maintenance_price_year?: number;
+  maintenance_price_month?: number;
+  additional_attributes?: object[];
+  updated_at: string;
 }
 
 interface CardSearcherProps {

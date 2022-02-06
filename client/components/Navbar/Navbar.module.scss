@@ -1,15 +1,29 @@
 .header {
-  padding: 20px 0;
-  box-shadow: 0 2px 12px rgb(0 0 0 / 15%);
+  padding: 22px 0;
   background: #fff;
-  position: relative;
-  z-index: 2;
+  border-bottom: 1px solid #EDF1F6;
 }
 
 .navWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.burger {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  span {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background: #0E284F;
+    &:first-child {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 .nav {
@@ -22,8 +36,4 @@
       }
     }
   }
-}
-
-.search {
-  cursor: pointer;
 }
