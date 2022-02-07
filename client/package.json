@@ -2,17 +2,20 @@
   "name": "cards",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "db": "json-server -p 3020 -d 400 -w db.json",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.7.1",
     "@emotion/react": "^11.7.1",
+    "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.6.0",
     "@mui/lab": "^5.0.0-alpha.65",
     "@mui/material": "^5.3.0",
+    "@mui/styles": "^5.3.0",
     "classnames": "^2.3.1",
     "json-server": "^0.17.0",
     "lodash": "^4.17.21",

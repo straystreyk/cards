@@ -1,0 +1,92 @@
+.topCardsBar {
+  margin-top: 50px;
+  display: flex;
+}
+
+.cardsVariations {
+  background: #F7F7F7;
+  border-radius: 42px;
+  padding: 5px;
+  display: flex;
+}
+
+.cardVariation {
+  color: var(--main_color);
+  padding: 12px 52px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.6px;
+  border-radius: 42px;
+}
+
+.activeVariation {
+  color: #fff;
+  background: var(--main_color);
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #FBFBFC;
+  border-radius: 23px;
+  padding: 41px 36px 30px 36px;
+}
+
+.cardNameWrapper {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.cardInfoWrapper {
+  display: flex;
+  margin-top: 30px;
+}
+
+.cardImage {
+  flex-shrink: 0;
+  width: 186px;
+  height: 117px;
+  border-radius: 10px;
+  background: var(--main_color);
+  margin-right: 79px;
+}
+
+.cardInfo {
+  margin-bottom: 36px;
+  & .infoName {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #838CAB;
+    margin-top: 2px;
+  }
+  & .infoValue {
+    line-height: 22.4px;
+    font-size: 16px;
+    font-weight: 800;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.cardButtons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-top: 57px;
+  border-top: 1px solid #E4E7F3;
+}
+
+.cardName {
+  max-width: 80%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22.4px;
+}
