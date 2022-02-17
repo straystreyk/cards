@@ -7,16 +7,21 @@ import { MainContainer } from "../../../components/MainContainer";
 import { CardInterface } from "../../../components/TabList";
 import classes from "../cards.module.scss";
 import { useRouter } from "next/router";
-import cn from "classnames";
-import { CardIcon, cardsVariations } from "../../../static/constants";
+import { CardIcon } from "../../../static/constants";
 import { ButtonPrimary } from "../../../components/Buttons/button-primary";
 import { ButtonOutline } from "../../../components/Buttons/button-outline";
+import { MenuItem, Select } from "@mui/material";
 
 const Cards: NextPage<{ cards: CardInterface[]; statusCode: number }> = ({
   cards,
   statusCode,
 }) => {
   const router = useRouter();
+  const [selectState, setSelectState] = React.useState("debit_cards");
+
+  const handleChange = (e: { target: { value: string } }) => {
+    setSelectState(e.target.value);
+  };
 
   if (statusCode !== 200) {
     return <Error statusCode={statusCode} />;
@@ -28,24 +33,15 @@ const Cards: NextPage<{ cards: CardInterface[]; statusCode: number }> = ({
         <div className="mainTitle">
           <h1>Банковские карты</h1>
         </div>
-        <div className={classes.topCardsBar}>
-          <div className={classes.cardsVariations}>
-            {cardsVariations.map((el) => {
-              return (
-                <Link key={el.href} href={el.href}>
-                  <a
-                    className={cn(
-                      classes.cardVariation,
-                      router.pathname.includes(el.href) &&
-                        classes.activeVariation
-                    )}
-                  >
-                    {el.name}
-                  </a>
-                </Link>
-              );
-            })}
-          </div>
+        <div className="toolBar">
+          <Select value={selectState} onChange={handleChange}>
+            <MenuItem value="debit_cards">Дебетовые карты</MenuItem>
+            <MenuItem value="credit_cards">
+              <Link href="credit_cards">
+                <a>Кредитные карты</a>
+              </Link>
+            </MenuItem>
+          </Select>
         </div>
         <div className={classes.cardWrapper}>
           {cards.map((el: CardInterface) => {

@@ -1,28 +1,3 @@
-.topCardsBar {
-  margin-top: 50px;
-  display: flex;
-}
-
-.cardsVariations {
-  background: #F7F7F7;
-  border-radius: 42px;
-  padding: 5px;
-  display: flex;
-}
-
-.cardVariation {
-  color: var(--main_color);
-  padding: 12px 52px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 19.6px;
-  border-radius: 42px;
-}
-
-.activeVariation {
-  color: #fff;
-  background: var(--main_color);
-}
 
 .cardWrapper {
   display: grid;

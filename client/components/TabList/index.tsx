@@ -27,7 +27,6 @@ interface CardSearcherProps {
 }
 
 export const ButtonContext: React.Context<any> = React.createContext(null);
-
 export const TabList: React.FC<CardSearcherProps> = () => {
   const [tabValue, setTabValue] = React.useState("1");
   const [widgetValue, setWidgetValue] = React.useState({});
